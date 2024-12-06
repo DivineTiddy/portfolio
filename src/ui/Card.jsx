@@ -18,7 +18,7 @@ const Layout = styled.div`
     width: 90%;
   }
 `;
-const Card = ({ imgUrl, url, title }) => {
+const Card = ({ url, title }) => {
   return (
     <Layout>
       <div>

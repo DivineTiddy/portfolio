@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Home from "./page/home/Home";
 import Contact from "./page/contact/Contact";
 import Nav from "./ui/Nav";
+import Footer from "./ui/Footer";
 
 const Layout = styled.div`
   width: 100%;
@@ -26,6 +27,7 @@ function App() {
     <Layout>
       <Nav/>
       <RouterProvider router={router} />
+      <Footer/>
     </Layout>
   );
 }

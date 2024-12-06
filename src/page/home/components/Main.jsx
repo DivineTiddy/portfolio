@@ -100,6 +100,12 @@ const Layout = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin-bottom: 60px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 50px;
+    }
 
     button {
       width: 298px;
@@ -113,6 +119,10 @@ const Layout = styled.main`
       font-family: "Roboto", serif;
       background-color: var(--ashe-color);
       border: none;
+      cursor: pointer;
+      @media (min-width: 768px) {
+        width: 240px;
+      }
     }
   }
 `;
