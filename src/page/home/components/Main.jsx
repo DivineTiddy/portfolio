@@ -11,6 +11,8 @@ import icon7 from "../../../assets/icons/icon-7.svg";
 import icon8 from "../../../assets/icons/icon-8.svg";
 import icon9 from "../../../assets/icons/icon-9.svg";
 import icon10 from "../../../assets/icons/icon-10.svg";
+import arrow from "../../../assets/icons/arrow.svg";
+
 import Card from "../../../ui/Card";
 
 const data = [
@@ -82,13 +84,35 @@ const Layout = styled.main`
       }
     }
   }
-  .styled-card{
+  .styled-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+
     @media (min-width: 768px) {
-     display: grid;
-     grid-template-columns: auto auto;
-     justify-content: center;
-     align-items: center;
-     gap: 60px;
+    }
+  }
+  .button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    button {
+      width: 298px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      line-height: 19px;
+      font-family: "Roboto", serif;
+      background-color: var(--ashe-color);
+      border: none;
     }
   }
 `;
@@ -153,11 +177,20 @@ function Main() {
           </span>
         </div>
       </div>
-     <div className="styled-card">
-     {
-        data.map((items)=>(<Card key={items.id} imgUrl={items.imgUrl} url={items.url} title={items.title} />))
-      }
-     </div>
+      <div className="styled-card">
+        {data.map((items) => (
+          <Card
+            key={items.id}
+            imgUrl={items.imgUrl}
+            url={items.url}
+            title={items.title}
+          />
+        ))}
+      </div>
+      <div className="button-container">
+        <button><img src={arrow}/>All Projects</button>
+        <button><img src={arrow}/>Contact me</button>
+      </div>
     </Layout>
   );
 }

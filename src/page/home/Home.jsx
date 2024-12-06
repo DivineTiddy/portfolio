@@ -4,8 +4,6 @@ import Main from "./components/Main"
 const Layout = styled.div`
     width: 100%;
     height: auto;
-    border: 1px solid black;
-
 `
 const Home = () => {
   return (
