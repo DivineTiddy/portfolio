@@ -8,7 +8,6 @@ const Layout = styled.div`
   height: 380px;
   border: 1px solid black;
   background-color: black;
-  margin-bottom: 33px;
   @media (min-width: 768px) {
     margin-bottom: 0px;
   }

@@ -14,6 +14,7 @@ import icon10 from "../../../assets/icons/icon-10.svg";
 import arrow from "../../../assets/icons/arrow.svg";
 
 import Card from "../../../ui/Card";
+import { Link } from "react-router";
 
 const data = [
   {
@@ -43,6 +44,8 @@ const Layout = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 80px 0px;
+
   .about {
     width: 298px;
     height: auto;
@@ -100,7 +103,7 @@ const Layout = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-bottom: 60px;
+    margin: 50px 0px;
     @media (min-width: 768px) {
       flex-direction: row;
       justify-content: center;
@@ -198,7 +201,7 @@ function Main() {
         ))}
       </div>
       <div className="button-container">
-        <button><img src={arrow}/>All Projects</button>
+        <Link to="/project"><button><img src={arrow}/>All Projects</button></Link>
         <button><img src={arrow}/>Contact me</button>
       </div>
     </Layout>

@@ -4,6 +4,7 @@ import Home from "./page/home/Home";
 import Contact from "./page/contact/Contact";
 import Nav from "./ui/Nav";
 import Footer from "./ui/Footer";
+import Project from "./page/project/Project";
 
 const Layout = styled.div`
   width: 100%;
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/project",
+    element: <Project/>,
   },
 ]);
 function App() {
