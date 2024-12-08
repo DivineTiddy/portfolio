@@ -202,7 +202,8 @@ function Main() {
       </div>
       <div className="button-container">
         <Link to="/project"><button><img src={arrow}/>All Projects</button></Link>
-        <button><img src={arrow}/>Contact me</button>
+        <Link to="/contact"><button><img src={arrow}/>Contact me</button></Link>
+
       </div>
     </Layout>
   );

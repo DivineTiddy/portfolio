@@ -14,6 +14,18 @@ const Heading = styled.h1`
 
     `}
     ${(props) =>
+    props.type === "contact-h1" &&
+    css`
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 80%;
+      color: var(--white-color);
+      /* width: 298px; */
+      text-align: center;
+      font-family: "League Gothic", sans-serif;
+
+    `}
+    ${(props) =>
     props.as === "h2" &&
     css`
       font-weight: normal;

@@ -5,6 +5,7 @@ import Contact from "./page/contact/Contact";
 import Nav from "./ui/Nav";
 import Footer from "./ui/Footer";
 import Project from "./page/project/Project";
+import About from "./page/about/About";
 
 const Layout = styled.div`
   width: 100%;
@@ -24,15 +25,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/project",
-    element: <Project/>,
+    element: <Project />,
+  },
+  {
+    path: "/about",
+    element: <About/> ,
   },
 ]);
 function App() {
   return (
     <Layout>
-      <Nav/>
+      <Nav />
       <RouterProvider router={router} />
-      <Footer/>
+      <Footer />
     </Layout>
   );
 }

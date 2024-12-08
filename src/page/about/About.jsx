@@ -6,13 +6,13 @@ const Layout = styled.div`
   width: 100%;
   height: auto;
 `;
-const Contact = () => {
+const About = () => {
   return (
     <Layout>
-      <Header/>
-      <Main />
+        <Header/>
+        <Main/>
     </Layout>
-  );
-};
+  )
+}
 
-export default Contact;
+export default About
