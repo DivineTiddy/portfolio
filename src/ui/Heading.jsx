@@ -26,6 +26,19 @@ const Heading = styled.h1`
 
     `}
     ${(props) =>
+    props.type === "menu-h1" &&
+    css`
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 44px;
+      color: var(--background-color);
+      /* width: 298px; */
+      text-align: center;
+      font-family: "League Gothic", sans-serif;
+      cursor: pointer;
+
+    `}
+    ${(props) =>
     props.as === "h2" &&
     css`
       font-weight: normal;

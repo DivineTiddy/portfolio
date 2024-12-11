@@ -6,6 +6,7 @@ import Nav from "./ui/Nav";
 import Footer from "./ui/Footer";
 import Project from "./page/project/Project";
 import About from "./page/about/About";
+import MenuBar from "./ui/MenuBar";
 
 const Layout = styled.div`
   width: 100%;
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Layout>
+      <MenuBar/>
       <Nav />
       <RouterProvider router={router} />
       <Footer />
