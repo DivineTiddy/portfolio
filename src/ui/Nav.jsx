@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import burger from "../assets/icons/burger.svg";
 import logo from "../assets/icons/logo.svg";
+import { UseValue } from "../context/UseContext";
 
 const Layout = styled.nav`
   width: 90%;
@@ -15,10 +16,14 @@ const Layout = styled.nav`
   }
 `;
 const Nav = () => {
+  const {dispatch} = UseValue()
+  function HandleClick() {
+    dispatch({ type: "open" });
+  }
   return (
     <Layout>
       <img src={logo} />
-      <img src={burger} />
+      <img onClick={HandleClick} src={burger} />
     </Layout>
   );
 };

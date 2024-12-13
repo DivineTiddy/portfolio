@@ -1,12 +1,11 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import {  Outlet,  } from "react-router";
 import styled from "styled-components";
-import Home from "./page/home/Home";
-import Contact from "./page/contact/Contact";
+
 import Nav from "./ui/Nav";
 import Footer from "./ui/Footer";
-import Project from "./page/project/Project";
-import About from "./page/about/About";
+
 import MenuBar from "./ui/MenuBar";
+import { UseValue } from "./context/UseContext";
 
 const Layout = styled.div`
   width: 100%;
@@ -15,30 +14,14 @@ const Layout = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
-  {
-    path: "/project",
-    element: <Project />,
-  },
-  {
-    path: "/about",
-    element: <About/> ,
-  },
-]);
+
 function App() {
+  const { open } = UseValue();
   return (
     <Layout>
-      <MenuBar/>
+      {open ? <MenuBar /> : ""}
       <Nav />
-      <RouterProvider router={router} />
+      <Outlet/>
       <Footer />
     </Layout>
   );

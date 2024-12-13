@@ -109,6 +109,9 @@ const Layout = styled.main`
       justify-content: center;
       margin-top: 50px;
     }
+    .link{
+      text-decoration: none;
+    }
 
     button {
       width: 298px;
@@ -201,9 +204,8 @@ function Main() {
         ))}
       </div>
       <div className="button-container">
-        <Link to="/project"><button><img src={arrow}/>All Projects</button></Link>
-        <Link to="/contact"><button><img src={arrow}/>Contact me</button></Link>
-
+        <Link className="link" to="/project"><button><img src={arrow}/>All Projects</button></Link>
+        <Link className="link" to="/contact"><button><img src={arrow}/>Contact me</button></Link>
       </div>
     </Layout>
   );

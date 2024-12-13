@@ -5,8 +5,11 @@ import Heading from "./Heading";
 import Text from "./Text";
 import twitter from "../assets/icons/twitter.svg";
 import insta from "../assets/icons/insta.svg";
+import { UseValue } from "../context/UseContext";
+import { Link } from "react-router";
 
 const Layout = styled.div`
+  position: fixed;
   width: 100%;
   height: 810px;
   background-color: white;
@@ -14,20 +17,34 @@ const Layout = styled.div`
   flex-direction: column;
   gap: 76px;
   align-items: center;
+  @media (min-width: 768px) {
+    gap: 170px;
+  }
+
+  .contentAndMediaContainer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 76px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: end;
+    }
+  }
   .closeContainer {
     width: 100%;
-    border: 1px solid black;
     height: 24px;
     display: flex;
     justify-content: end;
+    margin-top:60px;
     img {
       cursor: pointer;
+      margin: 0px 37px;
     }
   }
   .content {
     width: 262px;
     height: 262px;
-    border: 1px solid black;
     display: flex;
     gap: 6px;
     span {
@@ -40,36 +57,46 @@ const Layout = styled.div`
   .media {
     width: 298px;
     height: 118px;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 `;
 const MenuBar = () => {
+  const { dispatch } = UseValue();
+  function HandleClick() {
+    dispatch({ type: "close" });
+  }
   return (
     <Layout>
       <div className="closeContainer">
-        <img src={close} />
+        <img onClick={HandleClick} src={close} />
       </div>
-      <div className="content">
-        <img src={menuText} />
-        <span>
-          <Heading type="menu-h1">HOME</Heading>
-          <Heading type="menu-h1">PROJECTS</Heading>
-          <Heading type="menu-h1">ABOUT</Heading>
-          <Heading type="menu-h1">CONTACT</Heading>
-        </span>
-      </div>
-      <div className="media">
-        <Text type="media">your_mail@email.com</Text>
-
-        <div>
-          <Text type="media">+123 456 7890</Text>
+      <div className="contentAndMediaContainer">
+        <div className="content">
+          <img src={menuText} />
           <span>
-            <img src={insta} />
-            <img src={twitter} />
+            <Link><Heading type="menu-h1">HOME</Heading></Link>
+            <Heading type="menu-h1">PROJECTS</Heading>
+            <Heading type="menu-h1">ABOUT</Heading>
+            <Heading type="menu-h1">CONTACT</Heading>
           </span>
+        </div>
+        <div className="media">
+          <Text type="media">your_mail@email.com</Text>
+
+          <div>
+            <Text type="media">+123 456 7890</Text>
+            <span>
+              <img src={insta} />
+              <img src={twitter} />
+            </span>
+          </div>
         </div>
       </div>
     </Layout>
