@@ -29,10 +29,7 @@ const Header = () => {
         <Heading as="h1">YOUR NAME</Heading>
         <Heading as="h2">WEB-DESIGNER</Heading>
       </motion.div>
-      {/* <div className="hero-content">
-        <Heading as="h1">YOUR NAME</Heading>
-        <Heading as="h2">WEB-DESIGNER</Heading>
-      </div> */}
+     
     </Layout>
   );
 };

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Card from "../../ui/Card";
-import arrow from "../../assets/icons/arrow.svg";
 import { Link } from "react-router";
+import Button from "../../ui/Button";
 
 const data = [
   {
@@ -107,10 +107,7 @@ const Main = () => {
       </div>
       <div className="button-container">
         <Link className="link" to="/contact">
-          <button>
-            <img src={arrow} />
-            Contact me
-          </button>
+          <Button content="Contact me" />
         </Link>
       </div>
     </Layout>

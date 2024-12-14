@@ -21,9 +21,13 @@ const cardVariants = {
 const Layout = styled.div`
   width: 298px;
   height: 380px;
-  background-color: black;
-  @media (min-width: 768px) {
-    margin-bottom: 0px;
+  .styled-card {
+    width: 298px;
+    height: 380px;
+    background-color: black;
+    @media (min-width: 768px) {
+      margin-bottom: 0px;
+    }
   }
   .div {
     margin-left: 24px;
@@ -39,21 +43,20 @@ const Card = ({ url, title }) => {
     //     <Text type="use">{url}</Text>
     //   </div>
     // </Layout>
-    <motion.div
-      className="styled-card"
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.1 }}
-      variants={cardVariants}
-    >
-          <Layout>
-       <div>
-         <Heading as="h4">{title}</Heading>
-        <Text type="use">{url}</Text>
-       </div>
-     </Layout>
-      
-    </motion.div>
+    <Layout>
+      <motion.div
+        className="styled-card"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={cardVariants}
+      >
+        <div>
+          <Heading as="h4">{title}</Heading>
+          <Text type="use">{url}</Text>
+        </div>
+      </motion.div>
+    </Layout>
   );
 };
 Card.propTypes = {

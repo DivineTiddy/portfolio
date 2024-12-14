@@ -11,11 +11,10 @@ import icon7 from "../../../assets/icons/icon-7.svg";
 import icon8 from "../../../assets/icons/icon-8.svg";
 import icon9 from "../../../assets/icons/icon-9.svg";
 import icon10 from "../../../assets/icons/icon-10.svg";
-import arrow from "../../../assets/icons/arrow.svg";
 
 import Card from "../../../ui/Card";
 import { Link } from "react-router";
-
+import Button from "../../../ui/Button";
 
 const data = [
   {
@@ -195,7 +194,6 @@ function Main() {
         </div>
       </div>
       <div className="styled-card">
-     
         {data.map((items) => (
           <Card
             key={items.id}
@@ -204,20 +202,13 @@ function Main() {
             title={items.title}
           />
         ))}
-
       </div>
       <div className="button-container">
         <Link className="link" to="/project">
-          <button>
-            <img src={arrow} />
-            All Projects
-          </button>
+          <Button content="All Projects" />
         </Link>
         <Link className="link" to="/contact">
-          <button>
-            <img src={arrow} />
-            Contact me
-          </button>
+          <Button content="Contact me" />
         </Link>
       </div>
     </Layout>

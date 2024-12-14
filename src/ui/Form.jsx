@@ -2,7 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
-import arrow from "../assets/icons/arrow.svg";
+import Button from "./Button";
 const Layout = styled.div`
   width: 301px;
   height: 386px;
@@ -155,10 +155,8 @@ const ContactForm = () => {
             </div>
 
             <div className="button-container">
-              <button type="submit" disabled={isSubmitting}>
-                <img src={arrow} />
-                {isSubmitting ? "Sending..." : "Send message"}
-              </button>
+            
+              <Button type="submit" disabled={isSubmitting} content={isSubmitting ? "Sending..." : "Send message"}/>
             </div>
           </Form>
         )}
