@@ -11,7 +11,7 @@ import { Link } from "react-router";
 const Layout = styled.div`
   position: fixed;
   width: 100%;
-  height: 810px;
+  height: 830px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ const Layout = styled.div`
     height: 24px;
     display: flex;
     justify-content: end;
-    margin-top:60px;
+    margin-top: 60px;
     img {
       cursor: pointer;
       margin: 0px 37px;
@@ -47,11 +47,18 @@ const Layout = styled.div`
     height: 262px;
     display: flex;
     gap: 6px;
+    @media (min-width: 768px) {
+      align-items: center;
+    }
+    
     span {
       display: flex;
       flex-direction: column;
       gap: 26px;
       width: 234px;
+      .link{
+        text-decoration: none;
+      }
     }
   }
   .media {
@@ -72,6 +79,7 @@ const MenuBar = () => {
   function HandleClick() {
     dispatch({ type: "close" });
   }
+  
   return (
     <Layout>
       <div className="closeContainer">
@@ -81,10 +89,18 @@ const MenuBar = () => {
         <div className="content">
           <img src={menuText} />
           <span>
-            <Link><Heading type="menu-h1">HOME</Heading></Link>
-            <Heading type="menu-h1">PROJECTS</Heading>
-            <Heading type="menu-h1">ABOUT</Heading>
-            <Heading type="menu-h1">CONTACT</Heading>
+            <Link className="link" to="/">
+              <Heading onClick={HandleClick}  type="menu-h1">HOME</Heading>
+            </Link>
+            <Link  className="link" to="/project">
+              <Heading onClick={HandleClick}  type="menu-h1">PROJECTS</Heading>
+            </Link>
+            <Link  className="link" to="/about">
+              <Heading onClick={HandleClick}  type="menu-h1">ABOUT</Heading>
+            </Link>
+            <Link  className="link" to="/contact">
+              <Heading onClick={HandleClick}  type="menu-h1">CONTACT</Heading>
+            </Link>
           </span>
         </div>
         <div className="media">

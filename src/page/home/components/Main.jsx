@@ -12,9 +12,24 @@ import icon8 from "../../../assets/icons/icon-8.svg";
 import icon9 from "../../../assets/icons/icon-9.svg";
 import icon10 from "../../../assets/icons/icon-10.svg";
 import arrow from "../../../assets/icons/arrow.svg";
+import { motion } from "motion/react";
 
 import Card from "../../../ui/Card";
 import { Link } from "react-router";
+const cardVariants = {
+  offscreen: {
+    y: 200,
+  },
+  onscreen: {
+    y: 90,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 const data = [
   {
@@ -109,7 +124,7 @@ const Layout = styled.main`
       justify-content: center;
       margin-top: 50px;
     }
-    .link{
+    .link {
       text-decoration: none;
     }
 
@@ -193,7 +208,14 @@ function Main() {
           </span>
         </div>
       </div>
-      <div className="styled-card">
+      {/* <div className="styled-card"> */}
+      <motion.div
+        className="styled-card"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        variants={cardVariants}
+      >
         {data.map((items) => (
           <Card
             key={items.id}
@@ -202,10 +224,22 @@ function Main() {
             title={items.title}
           />
         ))}
-      </div>
+      </motion.div>
+
+      {/* </div> */}
       <div className="button-container">
-        <Link className="link" to="/project"><button><img src={arrow}/>All Projects</button></Link>
-        <Link className="link" to="/contact"><button><img src={arrow}/>Contact me</button></Link>
+        <Link className="link" to="/project">
+          <button>
+            <img src={arrow} />
+            All Projects
+          </button>
+        </Link>
+        <Link className="link" to="/contact">
+          <button>
+            <img src={arrow} />
+            Contact me
+          </button>
+        </Link>
       </div>
     </Layout>
   );

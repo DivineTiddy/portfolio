@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Text from "./Text";
-import logo from "../assets/icons/logo.svg"
+import logo from "../assets/icons/logo.svg";
+import { Link } from "react-router";
 
 const Layout = styled.footer`
   width: 100%;
@@ -18,6 +19,9 @@ const Layout = styled.footer`
     height: 22px;
     display: flex;
     gap: 29px;
+    .link {
+      text-decoration: none;
+    }
   }
   .contact {
     width: 239px;
@@ -25,22 +29,27 @@ const Layout = styled.footer`
     display: flex;
     gap: 21px;
     @media (min-width: 768px) {
-        display: flex;
-        flex-direction: row-reverse;
-      }
-  
+      display: flex;
+      flex-direction: row-reverse;
+    }
   }
 `;
 const Footer = () => {
   return (
     <Layout>
       <div className="content">
-        <Text type="use">PROJECTS</Text>
-        <Text type="use">ABOUT ME</Text>
-        <Text type="use">CONTACT</Text>
+        <Link className="link" to="/project">
+          <Text type="use">PROJECTS</Text>
+        </Link>
+        <Link className="link" to="/about">
+          <Text type="use">ABOUT ME</Text>
+        </Link>
+        <Link className="link" to="/contact">
+          <Text type="use">CONTACT</Text>
+        </Link>
       </div>
       <div className="contact">
-        <img src={logo}/>
+        <img src={logo} />
         <span>
           <Text type="use">+123 456 7890</Text>
           <Text type="use">your_mail@email.com</Text>

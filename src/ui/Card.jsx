@@ -11,7 +11,7 @@ const Layout = styled.div`
   @media (min-width: 768px) {
     margin-bottom: 0px;
   }
-  div {
+  .div {
     margin-left: 24px;
     margin-top: 15px;
     width: 90%;
@@ -25,6 +25,7 @@ const Card = ({ url, title }) => {
         <Text type="use">{url}</Text>
       </div>
     </Layout>
+   
   );
 };
 Card.propTypes = {

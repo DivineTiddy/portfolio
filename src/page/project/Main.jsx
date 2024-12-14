@@ -1,52 +1,52 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import Card from "../../ui/Card";
 import arrow from "../../assets/icons/arrow.svg";
 import { Link } from "react-router";
 
 const data = [
-    {
-      id: 1,
-      title: "Project title - Here comes the name of the Project",
-      url: "Here are the Tech’s used",
-      imgUrl: "Here are the Tech’s used",
-    },
-    {
-      id: 2,
-      title: "Project title - Here comes the name of the Project",
-      url: "Here are the Tech’s used",
-      imgUrl: "Here are the Tech’s used",
-    },
-    {
-      id: 3,
-      title: "Project title - Here comes the name of the Project",
-      url: "Here are the Tech’s used",
-      imgUrl: "Here are the Tech’s used",
-    },
-    {
-        id: 4,
-        title: "Project title - Here comes the name of the Project",
-        url: "Here are the Tech’s used",
-        imgUrl: "Here are the Tech’s used",
-      },
-      {
-        id: 5,
-        title: "Project title - Here comes the name of the Project",
-        url: "Here are the Tech’s used",
-        imgUrl: "Here are the Tech’s used",
-      },
-      {
-        id: 6,
-        title: "Project title - Here comes the name of the Project",
-        url: "Here are the Tech’s used",
-        imgUrl: "Here are the Tech’s used",
-      },
-  ];
+  {
+    id: 1,
+    title: "Project title - Here comes the name of the Project",
+    url: "Here are the Tech’s used",
+    imgUrl: "Here are the Tech’s used",
+  },
+  {
+    id: 2,
+    title: "Project title - Here comes the name of the Project",
+    url: "Here are the Tech’s used",
+    imgUrl: "Here are the Tech’s used",
+  },
+  {
+    id: 3,
+    title: "Project title - Here comes the name of the Project",
+    url: "Here are the Tech’s used",
+    imgUrl: "Here are the Tech’s used",
+  },
+  {
+    id: 4,
+    title: "Project title - Here comes the name of the Project",
+    url: "Here are the Tech’s used",
+    imgUrl: "Here are the Tech’s used",
+  },
+  {
+    id: 5,
+    title: "Project title - Here comes the name of the Project",
+    url: "Here are the Tech’s used",
+    imgUrl: "Here are the Tech’s used",
+  },
+  {
+    id: 6,
+    title: "Project title - Here comes the name of the Project",
+    url: "Here are the Tech’s used",
+    imgUrl: "Here are the Tech’s used",
+  },
+];
 const Layout = styled.div`
-width: 100%;
-height: auto;
-background-color: white;
-padding: 80px 0px;
-.styled-card {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 80px 0px;
+  .styled-card {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -63,10 +63,14 @@ padding: 80px 0px;
     align-items: center;
     gap: 30px;
     margin: 50px 0px;
+
     @media (min-width: 768px) {
       flex-direction: row;
       justify-content: center;
       margin-top: 50px;
+    }
+    .link {
+      text-decoration: none;
     }
 
     button {
@@ -87,11 +91,11 @@ padding: 80px 0px;
       }
     }
   }
-`
+`;
 const Main = () => {
   return (
     <Layout>
-         <div className="styled-card">
+      <div className="styled-card">
         {data.map((items) => (
           <Card
             key={items.id}
@@ -102,11 +106,15 @@ const Main = () => {
         ))}
       </div>
       <div className="button-container">
-      <Link to="/contact"><button><img src={arrow}/>Contact me</button></Link>
+        <Link className="link" to="/contact">
+          <button>
+            <img src={arrow} />
+            Contact me
+          </button>
+        </Link>
       </div>
-
     </Layout>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

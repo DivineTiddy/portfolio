@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Heading from "../../../ui/Heading";
+import { motion } from "motion/react";
 
 const Layout = styled.header`
   width: 100%;
@@ -18,17 +19,20 @@ const Layout = styled.header`
       width: 534px;
       height: 142px;
       gap: 4px;
-
     }
   }
 `;
 const Header = () => {
   return (
     <Layout>
-      <div className="hero-content">
+      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="hero-content">
         <Heading as="h1">YOUR NAME</Heading>
         <Heading as="h2">WEB-DESIGNER</Heading>
-      </div>
+      </motion.div>
+      {/* <div className="hero-content">
+        <Heading as="h1">YOUR NAME</Heading>
+        <Heading as="h2">WEB-DESIGNER</Heading>
+      </div> */}
     </Layout>
   );
 };
