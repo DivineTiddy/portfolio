@@ -22,7 +22,7 @@ const data = [
     id: 1,
     title: " News Portal",
     url: "React , Styled Components , API , React slick",
-    imgUrl: "public/image/Macbook-Air-localhost (2).png",
+    imgUrl: "public/image/bicycle.png",
 
   },
   {
