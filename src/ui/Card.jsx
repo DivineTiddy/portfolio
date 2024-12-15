@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const cardVariants = {
   offscreen: {
-    y: 50,
+    y: 100,
   },
   onscreen: {
     y: 0,
