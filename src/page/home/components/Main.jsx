@@ -11,7 +11,11 @@ import icon7 from "../../../assets/icons/icon-7.svg";
 import icon8 from "../../../assets/icons/icon-8.svg";
 import icon9 from "../../../assets/icons/icon-9.svg";
 import icon10 from "../../../assets/icons/icon-10.svg";
-import image1 from "../../../../public/image/bicycle.png"
+import image1 from "../../../../public/image/Macbook-Air-localhost (2).png"
+import image2 from "../../../../public/image/Macbook-Air-localhost (3).png"
+import image3 from "../../../../public/image/Macbook-Air-localhost (4).png"
+
+
 
 
 import Card from "../../../ui/Card";
@@ -30,12 +34,14 @@ const data = [
     id: 2,
     title: "Crypto Currency Chart",
     url: "React , Lightweight Chart , Styled components , API",
-    imgUrl: "public/image/Macbook-Air-localhost (3).png",
+    imgUrl: image2,
   },
   {
     id: 3,
     title: "Portfolio",
     url: "React , Framer-Motion , Styled Components",
+    imgUrl: image3,
+
   },
 ];
 
