@@ -42,12 +42,7 @@ const Layout = styled.div`
 `;
 const Card = ({ url, title, imgUrl }) => {
   return (
-    // <Layout>
-    //   <div>
-    //     <Heading as="h4">{title}</Heading>
-    //     <Text type="use">{url}</Text>
-    //   </div>
-    // </Layout>
+ 
     <Layout>
       <motion.div
         className="styled-card"

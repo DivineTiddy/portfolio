@@ -11,6 +11,7 @@ import icon7 from "../../../assets/icons/icon-7.svg";
 import icon8 from "../../../assets/icons/icon-8.svg";
 import icon9 from "../../../assets/icons/icon-9.svg";
 import icon10 from "../../../assets/icons/icon-10.svg";
+import image1 from "../../../../public/image/bicycle.png"
 
 
 import Card from "../../../ui/Card";
@@ -22,7 +23,7 @@ const data = [
     id: 1,
     title: " News Portal",
     url: "React , Styled Components , API , React slick",
-    imgUrl: "public/image/bicycle.png",
+    imgUrl: image1,
 
   },
   {
@@ -35,7 +36,6 @@ const data = [
     id: 3,
     title: "Portfolio",
     url: "React , Framer-Motion , Styled Components",
-    imgUrl: "public/image/Macbook-Air-localhost (4).png",
   },
 ];
 
