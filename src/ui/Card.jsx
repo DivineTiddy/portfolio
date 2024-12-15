@@ -33,9 +33,14 @@ const Layout = styled.div`
     margin-left: 24px;
     margin-top: 15px;
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+   
   }
 `;
-const Card = ({ url, title }) => {
+const Card = ({ url, title, imgUrl }) => {
   return (
     // <Layout>
     //   <div>
@@ -51,9 +56,12 @@ const Card = ({ url, title }) => {
         viewport={{ once: true, amount: 0.1 }}
         variants={cardVariants}
       >
-        <div>
-          <Heading as="h4">{title}</Heading>
-          <Text type="use">{url}</Text>
+        <div className="div">
+          <span>
+            <Heading as="h4">{title}</Heading>
+            <Text type="use">{url}</Text>
+          </span>
+          <img width="100%" src={imgUrl} />
         </div>
       </motion.div>
     </Layout>

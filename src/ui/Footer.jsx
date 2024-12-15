@@ -51,8 +51,8 @@ const Footer = () => {
       <div className="contact">
         <img src={logo} />
         <span>
-          <Text type="use">+123 456 7890</Text>
-          <Text type="use">your_mail@email.com</Text>
+          <Text type="use">+234 814 2809 072</Text>
+          <Text type="use">divinetidy@email.com</Text>
         </span>
       </div>
     </Layout>

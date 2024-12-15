@@ -12,6 +12,7 @@ import icon8 from "../../../assets/icons/icon-8.svg";
 import icon9 from "../../../assets/icons/icon-9.svg";
 import icon10 from "../../../assets/icons/icon-10.svg";
 
+
 import Card from "../../../ui/Card";
 import { Link } from "react-router";
 import Button from "../../../ui/Button";
@@ -19,21 +20,22 @@ import Button from "../../../ui/Button";
 const data = [
   {
     id: 1,
-    title: "Project title - Here comes the name of the Project",
-    url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
+    title: " News Portal",
+    url: "React , Styled Components , API , React slick",
+    imgUrl: "src/assets/image/Macbook-Air-localhost (2).png",
+
   },
   {
     id: 2,
-    title: "Project title - Here comes the name of the Project",
-    url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
+    title: "Crypto Currency Chart",
+    url: "React , Lightweight Chart , Styled components , API",
+    imgUrl: "src/assets/image/Macbook-Air-localhost (3).png",
   },
   {
     id: 3,
-    title: "Project title - Here comes the name of the Project",
-    url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
+    title: "Portfolio",
+    url: "React , Framer-Motion , Styled Components",
+    imgUrl: "src/assets/image/Macbook-Air-localhost (4).png",
   },
 ];
 
@@ -138,14 +140,17 @@ function Main() {
       <div className="about">
         <Heading as="h3">About me</Heading>
         <Text type="about">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum.
+          I am a skilled React frontend developer with a passion for creating
+          intuitive and responsive user interfaces. My expertise lies in
+          building efficient, reusable components and delivering seamless user
+          experiences. I have a strong foundation in JavaScript, modern ES6+
+          features, and state management libraries like Redux or Context API.
+          I’m experienced in working with APIs, handling dynamic data, and
+          implementing responsive designs using frameworks like TailwindCSS
+          . I’m committed to writing clean, maintainable code and
+          staying updated with the latest trends in frontend development.
+          Collaboration, problem-solving, and attention to detail drive my work
+          in crafting engaging digital solutions.
         </Text>
       </div>
       <div className="skill">

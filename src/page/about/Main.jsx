@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Heading from "../../ui/Heading";
 import Text from "../../ui/Text";
-import arrow from "../../assets/icons/arrow.svg"
+import arrow from "../../assets/icons/arrow.svg";
 
 const Layout = styled.div`
   width: 100%;
@@ -60,33 +60,49 @@ const Main = () => {
   return (
     <Layout>
       <div className="about">
-        <Heading as="h3">My Background</Heading>
+        <Heading as="h3">My Job Experience</Heading>
         <Text type="about">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum.
+          During my internship at Thyncity, I contributed to the development of
+          dynamic and responsive web applications as part of the frontend team.
+          My key responsibilities included:
+          <ul>
+            <li>
+              Building and maintaining reusable React components to enhance code
+              efficiency and maintainability.
+            </li>
+            <li>
+              Collaborating with designers and backend developers to integrate
+              user-friendly interfaces and seamless APIs.
+            </li>
+            <li>
+              Debugging and optimizing web applications for better performance
+              and user experience.
+            </li>
+            <li>
+              Implementing modern tools and libraries like React Router, Axios,
+              and TailwindCSS to enhance functionality and design.
+            </li>
+            <li>
+              Gaining hands-on experience with version control systems like Git
+              and working in an Agile development environment.
+            </li>
+          </ul>
+          This experience honed my technical skills in React development and
+          taught me the importance of teamwork, problem-solving, and delivering
+          high-quality results within deadlines.
         </Text>
       </div>
       <div className="about">
-        <Heading as="h3">My Hobbies and Interests</Heading>
+        <Heading as="h3">My Background</Heading>
         <Text type="about">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum.
+        I am currently a student at the University of Calabar in Nigeria, where I am pursuing my academic and professional development. Living in Nigeria has shaped my perspective and adaptability, equipping me with a strong work ethic and a passion for learning. My journey as a student has inspired me to explore technology, particularly frontend development, where I aim to create impactful digital solutions. Balancing my studies with hands-on projects and an internship at Thyncity has provided me with real-world experience and the skills to grow as a developer.
         </Text>
       </div>
       <div className="button-container">
-        <button><img src={arrow}/>Contact me</button>
+        <button>
+          <img src={arrow} />
+          Contact me
+        </button>
       </div>
     </Layout>
   );

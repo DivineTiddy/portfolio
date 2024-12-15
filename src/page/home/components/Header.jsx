@@ -26,8 +26,8 @@ const Header = () => {
   return (
     <Layout>
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="hero-content">
-        <Heading as="h1">YOUR NAME</Heading>
-        <Heading as="h2">WEB-DESIGNER</Heading>
+        <Heading as="h1">DIVINE</Heading>
+        <Heading as="h2">FRONTEND-DEVELOPER</Heading>
       </motion.div>
      
     </Layout>
