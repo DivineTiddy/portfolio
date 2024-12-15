@@ -22,20 +22,20 @@ const data = [
     id: 1,
     title: " News Portal",
     url: "React , Styled Components , API , React slick",
-    imgUrl: "src/assets/image/Macbook-Air-localhost (2).png",
+    imgUrl: "public/image/Macbook-Air-localhost (2).png",
 
   },
   {
     id: 2,
     title: "Crypto Currency Chart",
     url: "React , Lightweight Chart , Styled components , API",
-    imgUrl: "src/assets/image/Macbook-Air-localhost (3).png",
+    imgUrl: "public/image/Macbook-Air-localhost (3).png",
   },
   {
     id: 3,
     title: "Portfolio",
     url: "React , Framer-Motion , Styled Components",
-    imgUrl: "src/assets/image/Macbook-Air-localhost (4).png",
+    imgUrl: "public/image/Macbook-Air-localhost (4).png",
   },
 ];
 
