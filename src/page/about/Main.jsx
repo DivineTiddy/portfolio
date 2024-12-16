@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Heading from "../../ui/Heading";
 import Text from "../../ui/Text";
-import arrow from "../../assets/icons/arrow.svg";
+import { Link } from "react-router";
+import Button from "../../ui/Button";
 
 const Layout = styled.div`
   width: 100%;
@@ -35,6 +36,9 @@ const Layout = styled.div`
       flex-direction: row;
       justify-content: center;
       margin-top: 50px;
+    }
+    .link {
+      text-decoration: none;
     }
 
     button {
@@ -95,14 +99,21 @@ const Main = () => {
       <div className="about">
         <Heading as="h3">My Background</Heading>
         <Text type="about">
-        I am currently a student at the University of Calabar in Nigeria, where I am pursuing my academic and professional development. Living in Nigeria has shaped my perspective and adaptability, equipping me with a strong work ethic and a passion for learning. My journey as a student has inspired me to explore technology, particularly frontend development, where I aim to create impactful digital solutions. Balancing my studies with hands-on projects and an internship at Thyncity has provided me with real-world experience and the skills to grow as a developer.
+          I am currently a student at the University of Calabar in Nigeria,
+          where I am pursuing my academic and professional development. Living
+          in Nigeria has shaped my perspective and adaptability, equipping me
+          with a strong work ethic and a passion for learning. My journey as a
+          student has inspired me to explore technology, particularly frontend
+          development, where I aim to create impactful digital solutions.
+          Balancing my studies with hands-on projects and an internship at
+          Thyncity has provided me with real-world experience and the skills to
+          grow as a developer.
         </Text>
       </div>
       <div className="button-container">
-        <button>
-          <img src={arrow} />
-          Contact me
-        </button>
+        <Link className="link" to="/contact">
+          <Button content="Contact me" />
+        </Link>
       </div>
     </Layout>
   );

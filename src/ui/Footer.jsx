@@ -49,7 +49,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="contact">
-        <img src={logo} />
+        <Link to="/"><img src={logo} /></Link>
         <span>
           <Text type="use">+234 814 2809 072</Text>
           <Text type="use">divinetidy@email.com</Text>

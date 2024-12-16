@@ -2,37 +2,46 @@ import styled from "styled-components";
 import Card from "../../ui/Card";
 import { Link } from "react-router";
 import Button from "../../ui/Button";
+import image1 from "../../../public/image/Macbook-Air-fitness-divine.vercel.app.png"
+import image2 from "../../../public/image/Macbook-Air-localhost (2).png"
+import image3 from "../../../public/image/Macbook-Air-localhost (4).png"
+import image4 from "../../../public/image/Macbook-Air-divine-roiiade.vercel.app.png"
+import image5 from "../../../public/image/Macbook-Air-localhost (3).png"
+
+
+
+
 
 const data = [
   {
     id: 1,
     title: "Project title - Here comes the name of the Project",
     url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
+    imgUrl: image1,
   },
   {
     id: 2,
     title: "Project title - Here comes the name of the Project",
     url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
+    imgUrl: image2,
   },
   {
     id: 3,
     title: "Project title - Here comes the name of the Project",
     url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
+    imgUrl: image3,
   },
   {
     id: 4,
     title: "Project title - Here comes the name of the Project",
     url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
+    imgUrl: image4,
   },
   {
     id: 5,
     title: "Project title - Here comes the name of the Project",
     url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
+    imgUrl: image5,
   },
   {
     id: 6,
