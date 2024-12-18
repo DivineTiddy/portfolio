@@ -28,6 +28,8 @@ const data = [
     title: " News Portal",
     url: "React , Styled Components , API , React slick",
     imgUrl: image1,
+    link:"https://hot-topic.onrender.com",
+    code:"https://github.com/DivineTiddy/hot-topic"
 
   },
   {
@@ -35,12 +37,16 @@ const data = [
     title: "Crypto Currency Chart",
     url: "React , Lightweight Chart , Styled components , API",
     imgUrl: image2,
+    link:"https://candlestick-wf42.onrender.com",
+    code:"https://github.com/DivineTiddy/candlestic"
   },
   {
     id: 3,
     title: "Portfolio",
     url: "React , Framer-Motion , Styled Components",
     imgUrl: image3,
+    link:"https://divine-u66h.onrender.com",
+    code:"https://github.com/DivineTiddy/portfolio"
 
   },
 ];
@@ -211,6 +217,8 @@ function Main() {
             imgUrl={items.imgUrl}
             url={items.url}
             title={items.title}
+            link={items.link}
+            code={items.code}
           />
         ))}
       </div>

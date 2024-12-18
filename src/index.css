@@ -23,6 +23,8 @@ body {
   background-color: var(--ashe-color);
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+
   @media (min-width: 768px) {
     width: 240px;
   }
