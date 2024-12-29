@@ -222,6 +222,7 @@ function Main() {
           />
         ))}
       </div>
+
       <div className="button-container">
         <Link className="link" to="/project">
           <Button content="All Projects" />

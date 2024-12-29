@@ -22,7 +22,7 @@ const data = [
     title: " News Portal",
     url: "React , Styled Components , API , React slick",
     imgUrl: image2,
-    link: "https://hot-topic.onrender.com",
+    link:"https://hot-topic.onrender.com",
     code: "https://github.com/DivineTiddy/hot-topic",
   },
   {
@@ -48,12 +48,6 @@ const data = [
     imgUrl: image5,
     link: "https://candlestick-wf42.onrender.com",
     code: "https://github.com/DivineTiddy/candlestic",
-  },
-  {
-    id: 6,
-    title: "Project title - Here comes the name of the Project",
-    url: "Here are the Tech’s used",
-    imgUrl: "Here are the Tech’s used",
   },
 ];
 const Layout = styled.div`
@@ -117,9 +111,12 @@ const Main = () => {
             imgUrl={items.imgUrl}
             url={items.url}
             title={items.title}
+            link={items.link}
+            code={items.code}
           />
         ))}
       </div>
+
       <div className="button-container">
         <Link className="link" to="/contact">
           <Button content="Contact me" />
